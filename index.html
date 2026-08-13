@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Arbre à Pompes</title>
+<style>
+  :root{
+    --bg:#F7F3E6; --surface:#FFFFFF; --ink:#1E2A1E; --muted:#5C6B54;
+    --line:#E4DEC9; --accent:#2F7D46; --accent-soft:#E7F0E2; --gold:#C08A2B;
+    --maxw:720px;
+  }
+  :root:not([data-theme="light"]){}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141A14; --surface:#1C241C; --ink:#EAF0E4; --muted:#A6B49C;
+      --line:#2C382B; --accent:#7DC98E; --accent-soft:#22301F; --gold:#E0B863;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#141A14; --surface:#1C241C; --ink:#EAF0E4; --muted:#A6B49C;
+    --line:#2C382B; --accent:#7DC98E; --accent-soft:#22301F; --gold:#E0B863;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:40px 24px 80px}
+  header{
+    display:flex; align-items:center; gap:14px; padding-bottom:22px;
+    border-bottom:1px solid var(--line); margin-bottom:14px;
+  }
+  .logo{
+    width:52px; height:52px; border-radius:14px; flex:none;
+    background:var(--accent-soft); display:grid; place-items:center; font-size:28px;
+  }
+  header h1{font-size:1.5rem; margin:0; line-height:1.2; letter-spacing:-.01em}
+  header p{margin:2px 0 0; color:var(--muted); font-size:.9rem}
+  .updated{
+    display:inline-block; margin:20px 0 8px; font-size:.78rem; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--muted);
+  }
+  .lead{font-size:1.05rem; color:var(--ink)}
+  h2{
+    font-size:1.15rem; margin:38px 0 10px; letter-spacing:-.01em;
+    display:flex; align-items:baseline; gap:10px;
+  }
+  h2 .n{color:var(--accent); font-variant-numeric:tabular-nums; font-size:.9rem; font-weight:700}
+  p,li{color:var(--ink)}
+  a{color:var(--accent); text-decoration:underline; text-underline-offset:2px}
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:14px;
+    padding:16px 20px; margin:16px 0;
+  }
+  .ok{border-left:4px solid var(--accent)}
+  ul{padding-left:20px; margin:10px 0}
+  li{margin:6px 0}
+  strong{color:var(--ink)}
+  .muted{color:var(--muted)}
+  footer{
+    margin-top:48px; padding-top:20px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:.86rem;
+  }
+  code{background:var(--accent-soft); padding:1px 6px; border-radius:6px; font-size:.9em}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header>
+    <div class="logo">🌳</div>
+    <div>
+      <h1>Politique de confidentialité</h1>
+      <p>Application mobile <strong>Arbre à Pompes</strong></p>
+    </div>
+  </header>
+
+  <span class="updated">Dernière mise à jour : 11 août 2026</span>
+
+  <p class="lead">Arbre à Pompes respecte ta vie privée. Cette application est conçue pour fonctionner
+  avec un minimum de données. Ce document explique, simplement, quelles informations sont utilisées et pourquoi.</p>
+
+  <div class="card ok">
+    <strong>L'essentiel :</strong> la caméra sert uniquement à compter tes mouvements <strong>sur ton téléphone</strong>.
+    Aucune photo ni vidéo n'est enregistrée, ni envoyée à qui que ce soit.
+  </div>
+
+  <h2><span class="n">01</span> Qui est responsable</h2>
+  <p>L'application « Arbre à Pompes » est éditée par un développeur indépendant.
+  Pour toute question relative à tes données, contacte&nbsp;:
+  <a href="mailto:sylvain.reverdy@gmail.com">sylvain.reverdy@gmail.com</a>.</p>
+
+  <h2><span class="n">02</span> La caméra</h2>
+  <p>Pour compter tes pompes et tes squats, l'application analyse l'image de la caméra en temps réel,
+  <strong>directement sur ton appareil</strong>. Cette analyse&nbsp;:</p>
+  <ul>
+    <li>ne crée <strong>aucune photo ni vidéo</strong>&nbsp;;</li>
+    <li>n'est <strong>jamais enregistrée</strong> sur le téléphone&nbsp;;</li>
+    <li>n'est <strong>jamais transmise</strong> sur Internet ni à un serveur.</li>
+  </ul>
+  <p>L'accès à la caméra n'est demandé qu'au moment où tu démarres une séance.</p>
+
+  <h2><span class="n">03</span> Données de jeu et classement</h2>
+  <p>Ta progression (arbre, séries, gemmes, réglages) est stockée <strong>localement</strong> sur ton appareil.</p>
+  <p>Si tu choisis de participer au <strong>classement en ligne</strong>, les informations suivantes sont envoyées à notre
+  prestataire d'hébergement de base de données (Supabase)&nbsp;:</p>
+  <ul>
+    <li>le <strong>pseudonyme</strong> que tu saisis (tu peux en choisir un anonyme)&nbsp;;</li>
+    <li>tes <strong>scores</strong> (nombre de pompes/squats, séries).</li>
+  </ul>
+  <p>Nous ne demandons <strong>ni ton vrai nom, ni ton adresse e-mail, ni ta localisation précise</strong> pour le classement.
+  Le classement peut afficher un pays si tu l'indiques.</p>
+
+  <h2><span class="n">04</span> Publicités</h2>
+  <p>L'application est gratuite et financée par la publicité via <strong>Google AdMob</strong>.
+  Pour afficher des annonces, AdMob peut utiliser des identifiants publicitaires et des données techniques de l'appareil.
+  Dans l'Espace économique européen, au Royaume-Uni et en Suisse, un écran de <strong>consentement</strong> te permet
+  d'accepter ou de refuser les annonces personnalisées.</p>
+  <p class="muted">En savoir plus sur les données traitées par Google&nbsp;:
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+  <h2><span class="n">05</span> Achats intégrés</h2>
+  <p>Cette application <strong>ne propose aucun achat</strong>. Les gemmes se gagnent uniquement en jouant.</p>
+
+  <h2><span class="n">06</span> Enfants</h2>
+  <p>Arbre à Pompes n'est pas destinée aux enfants de moins de 13&nbsp;ans et ne collecte pas sciemment
+  leurs données.</p>
+
+  <h2><span class="n">07</span> Conservation et suppression</h2>
+  <p>Les données de jeu locales sont supprimées si tu désinstalles l'application.
+  Pour supprimer ton pseudonyme et tes scores du classement en ligne, écris-nous à
+  <a href="mailto:sylvain.reverdy@gmail.com">sylvain.reverdy@gmail.com</a>&nbsp;: nous les effacerons.</p>
+
+  <h2><span class="n">08</span> Tes droits</h2>
+  <p>Conformément au RGPD, tu peux demander l'accès, la rectification ou la suppression de tes données
+  en nous contactant à l'adresse ci-dessus.</p>
+
+  <h2><span class="n">09</span> Modifications</h2>
+  <p>Cette politique pourra être mise à jour. La date en haut de page indique la dernière version.</p>
+
+  <footer>
+    Arbre à Pompes — Contact&nbsp;: <a href="mailto:sylvain.reverdy@gmail.com">sylvain.reverdy@gmail.com</a><br>
+    Cette page constitue la politique de confidentialité officielle de l'application.
+  </footer>
+</div>
+
+</body>
+</html>
