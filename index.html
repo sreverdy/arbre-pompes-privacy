@@ -64,6 +64,8 @@
     color:var(--muted); font-size:.86rem;
   }
   code{background:var(--accent-soft); padding:1px 6px; border-radius:6px; font-size:.9em}
+  .eml{color:var(--accent); text-decoration:underline; text-underline-offset:2px; cursor:pointer}
+  .eml-fallback{unicode-bidi:bidi-override}
 </style>
 </head>
 <body>
@@ -91,7 +93,7 @@
   <h2><span class="n">01</span> Qui est responsable</h2>
   <p>L'application « Arbre à Pompes » est éditée par un développeur indépendant.
   Pour toute question relative à tes données, contacte&nbsp;:
-  <a href="mailto:sylvain.reverdy@gmail.com">sylvain.reverdy@gmail.com</a>.</p>
+  <a class="eml" data-u="sylvain.reverdy.play" data-d="gmail.com" href="#"><span class="eml-fallback">sylvain·reverdy·play&#8203; [arobase] gmail [point] com</span></a>.</p>
 
   <h2><span class="n">02</span> La caméra</h2>
   <p>Pour compter tes pompes et tes squats, l'application analyse l'image de la caméra en temps réel,
@@ -132,7 +134,7 @@
   <h2><span class="n">07</span> Conservation et suppression</h2>
   <p>Les données de jeu locales sont supprimées si tu désinstalles l'application.
   Pour supprimer ton pseudonyme et tes scores du classement en ligne, écris-nous à
-  <a href="mailto:sylvain.reverdy@gmail.com">sylvain.reverdy@gmail.com</a>&nbsp;: nous les effacerons.</p>
+  <a class="eml" data-u="sylvain.reverdy.play" data-d="gmail.com" href="#"><span class="eml-fallback">sylvain·reverdy·play&#8203; [arobase] gmail [point] com</span></a>&nbsp;: nous les effacerons.</p>
 
   <h2><span class="n">08</span> Tes droits</h2>
   <p>Conformément au RGPD, tu peux demander l'accès, la rectification ou la suppression de tes données
@@ -142,10 +144,24 @@
   <p>Cette politique pourra être mise à jour. La date en haut de page indique la dernière version.</p>
 
   <footer>
-    Arbre à Pompes — Contact&nbsp;: <a href="mailto:sylvain.reverdy@gmail.com">sylvain.reverdy@gmail.com</a><br>
+    Arbre à Pompes — Contact&nbsp;: <a class="eml" data-u="sylvain.reverdy.play" data-d="gmail.com" href="#"><span class="eml-fallback">sylvain·reverdy·play&#8203; [arobase] gmail [point] com</span></a><br>
     Cette page constitue la politique de confidentialité officielle de l'application.
   </footer>
 </div>
+
+<script>
+  // Reconstruit l'adresse e-mail côté client pour gêner les robots aspirateurs.
+  (function () {
+    var links = document.querySelectorAll('a.eml');
+    for (var i = 0; i < links.length; i++) {
+      (function (a) {
+        var addr = a.getAttribute('data-u') + '@' + a.getAttribute('data-d');
+        a.textContent = addr;
+        a.setAttribute('href', 'mailto:' + addr);
+      })(links[i]);
+    }
+  })();
+</script>
 
 </body>
 </html>
